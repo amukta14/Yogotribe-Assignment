@@ -1,0 +1,9 @@
+# Node modules for the prime checker API
+prime-checker-api/node_modules/
+
+# macOS specific
+.DS_Store
+
+# Optional: if fact-app's .gitignore wasn't thorough or was removed
+# fact-app/node_modules/
+# fact-app/build/ 

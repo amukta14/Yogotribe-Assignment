@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 2.5rem; /* Slightly larger title */
+  color: #61dafb; /* Title color to match button */
+}
+
+.cat-icon {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  fill: #61dafb; /* Icon color */
+}
+
+button {
+  background-color: #61dafb;
+  border: none;
+  color: #282c34;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1rem; /* Slightly larger button text */
+  margin: 30px 0; /* More space around the button */
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #21a1f1;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+  transform: translateY(0px); /* Press down effect */
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: translateY(0px); /* No lift when disabled */
+}
+
+.fact-container {
+  margin-top: 20px;
+  min-height: 100px; /* Reserve space for the fact or loader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 600px; /* Max width for readability */
+}
+
+.fact {
+  padding: 20px; /* More padding */
+  border: 1px solid #61dafb;
+  border-radius: 12px; /* More rounded corners */
+  background-color: #3a3f4a;
+  word-wrap: break-word;
+  animation: fadeIn 0.5s ease-in-out;
+  line-height: 1.6; /* Improved readability */
+}
+
+.error {
+  margin-top: 20px;
+  padding: 15px; /* More padding */
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+  border-radius: 12px; /* More rounded corners */
+  background-color: #4a3a3a;
+  max-width: 80%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Loading Spinner */
+.loader {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #61dafb; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
